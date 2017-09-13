@@ -87,7 +87,7 @@ function getTodayRate(inputToday, htmlObject) {
 
     day = inputToday.getDate();
     month = inputToday.getMonth() + 1;
-    url = "http://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
+    url = "https://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
 
     console.log(url);
     $.ajax({
