@@ -82,6 +82,7 @@ function getRates() {
 
 }
 
+
 function getTodayRate(inputToday, htmlObject) {
     var day, month;
 
