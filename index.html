@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--Zapewnienie reagowania zawartości strony na różne wielkości ekranu, kwestia responsywnsci -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kurs Funta</title>
+
+    <!--Podpinamy czcionki-->
+    <!--   font awesome   -->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!--   czcionki   -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+
+    <!--Skompresowany BootstrapCSS dodany lokalnie -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <!--moje style-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <section id="main">
+        <div id="main-container" class="container">
+
+            <div id="title" class="row">
+                <h1>Kiniu, sprawdź funta!</h1>
+            </div>
+            <div id="content" class="row">
+                <div id="current" class="col-xs-12 col-sm-6">
+                    <div class="panel panel-default">
+                        <div class="panel panel-info">
+                            <div id="rate-today" class="panel-heading">
+                                Raport:
+                            </div>
+                        </div>
+                        <div id="rate-today" class="panel panel-info">
+                            <div class="panel-heading">Dzisiejszy kurs funta</div>
+                            <div class="panel-body">
+                                <p></p>
+                                <i id="today-icon">    </i>
+                            </div>
+                        </div>
+
+                        <div id="rate-week" class="panel panel-info">
+                            <div class="panel-heading">Kurs funta tydzień temu</div>
+                            <div class="panel-body">
+                                <p></p>
+                                <i id="week-icon"></i>
+                            </div>
+                        </div>
+
+                        <div id="rate-month" class="panel panel-info">
+                            <div class="panel-heading">Kurs funta miesiąc temu</div>
+                            <div class="panel-body">
+                                <p></p>
+                                <i id="month-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="picker" class="col-xs-12 col-sm-6">
+                    <!-- Form code begins -->
+                    <!--                    <form method="post">-->
+                    <div class="panel panel-default">
+                        <div class="form-group">
+                            <!-- Date input -->
+                            <div class="panel panel-info">
+                                <div id="rate-today" class="panel-heading">
+                                    Wybierz datę:
+                                </div>
+                            </div>
+                            <input class="form-control" id="date" name="date" placeholder="DD/MM/YYY" type="text" />
+
+                        </div>
+                        <div id="result-date" class="alert alert-success alert-display" role="alert">
+                            <span>Kiniu!</span>
+                            <p></p>
+                        </div>
+                        <div id="alert" class="alert alert-danger alert-display" role="alert">
+                            <span>Och Kiniu!</span> Niestety nie wiemy, co przyniesie przyszłość...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="summary" class="row">
+                <h2>Do 1 <i class="fa fa-gbp"></i> = 4.90 PLN zostało...</h2>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!--jQuery(wymagany dla BootstrapJavaScript) -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!--Skompresowany plik BootstrapJavaScriptdodany lokalnie -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <!--i nasz skrypt na koniec :) -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

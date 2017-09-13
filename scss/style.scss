@@ -1,0 +1,91 @@
+//podpinamy plik ze zmiennymi
+@import "variables";
+@import "mixins";
+* {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+body {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#main {
+    min-height: 100vh;
+    background-image: url('../img/google-wallpaper-images-HD7.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 30px;
+}
+
+h1 {
+    color: $color-white;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#picker,
+#current {
+    label {
+        color: $color-white;
+    }
+}
+
+span {
+    font-weight: bold;
+}
+
+#alert{
+    transition: all 0.5s;
+}
+
+.alert-display {
+    display: none;
+}
+
+.panel-default {
+    padding: 10px;
+}
+
+
+.fa {
+    display: inline-block;
+    font-size: 24px;
+    
+    .fa-thumbs-up{
+//        color: green;
+    }
+}
+
+.fa-thumbs-up{
+    color: green;
+}
+
+.fa-thumbs-down{
+    color: red;
+}
+
+.fa-minus{
+    color: deepskyblue;
+}
+
+
+
+.panel-body{
+    p {
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+#summary{
+    text-align:center;
+    color: $color-white;
+    
+    .progress-bar{
+        transition: all 0.5s;
+    }
+}
+
