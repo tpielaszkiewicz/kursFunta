@@ -38,7 +38,7 @@ $(document).ready(function () {
             } else {
                 day = inputDay.getDate();
                 month = inputDay.getMonth() + 1;
-                url = "http://api.fixer.io/latest?base=GBP&date=" + inputDay.getFullYear() + '-' + month + '-' + day;
+                url = "https://api.fixer.io/latest?base=GBP&date=" + inputDay.getFullYear() + '-' + month + '-' + day;
 
                 console.log(url);
                 $.ajax({
@@ -115,7 +115,7 @@ function getTodayRate(inputToday, htmlObject) {
                 inputToday.setDate(inputToday.getDate() - 1);
                 day = inputToday.getDate();
                 month = inputToday.getMonth() + 1;
-                url = "http://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
+                url = "https://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
 
                 $.ajax({
                     url: url,
