@@ -72,13 +72,16 @@ function getRates() {
 
     getTodayRate(today, 'rate-today');
 
-    console.log('tydzien temu');
-    today.setDate(today.getDate() - 7);
-    getTodayRate(today, 'rate-week');
+    setTimeout(function () {
+        var newDay = today;
+        console.log('tydzien temu');
+        newDay.setDate(newDay.getDate() - 7);
+        getTodayRate(newDay, 'rate-week');
 
-    console.log('miesiac temu');
-    today.setDate(today.getDate() - 23);
-    getTodayRate(today, 'rate-month');
+        console.log('miesiac temu');
+        newDay.setDate(newDay.getDate() - 23);
+        getTodayRate(newDay, 'rate-month');
+    }, 500);
 
 }
 
@@ -89,8 +92,8 @@ function getTodayRate(inputToday, htmlObject) {
     day = inputToday.getDate();
     month = inputToday.getMonth() + 1;
     url = "https://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
-
     console.log(url);
+
     $.ajax({
         url: url,
         dataType: 'json',
@@ -102,22 +105,23 @@ function getTodayRate(inputToday, htmlObject) {
 
             if (htmlObject == 'rate-today') {
                 globalTodayRate = resultJSON.rates.PLN;
-                
-                percentage = (globalTodayRate / 4.90)*100;
-                if ( percentage >= 100 ) {
+
+                percentage = (globalTodayRate / 4.90) * 100;
+                if (percentage >= 100) {
                     percentage = 100;
                     $('.progress-bar').removeClass('progress-bar-info');
                     $('.progress-bar').addClass('progress-bar-success');
                     $('.progress p').text('CZAS WYMIENIĆ PIENIĄŻKI!');
                 }
-                
+
                 $('#summary .progress-bar').css('width', percentage + "%");
                 // get date from yesterday and compare 
                 inputToday.setDate(inputToday.getDate() - 1);
                 day = inputToday.getDate();
+                console.log(day);
                 month = inputToday.getMonth() + 1;
                 url = "https://api.fixer.io/latest?base=GBP&date=" + inputToday.getFullYear() + '-' + month + '-' + day;
-
+                console.log(url);
                 $.ajax({
                     url: url,
                     dataType: 'json',
